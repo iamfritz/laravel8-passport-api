@@ -1,0 +1,257 @@
+{
+	"info": {
+		"_postman_id": "3788ef10-b7de-4f61-9666-11a780552a35",
+		"name": "LaravelRestAPI-Passport",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/register?name=Fritz&email=link4anything@gmail.com&password=123456789&c_password=123456789",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Fritz"
+						},
+						{
+							"key": "email",
+							"value": "link4anything@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "123456789"
+						},
+						{
+							"key": "c_password",
+							"value": "123456789"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login API",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/login?email=link4anything@gmail.com&password=123456789",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "link4anything@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "123456789"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product List API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{newtoken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjc1NDBlMDAwNWRhOWY4ZWUzNDhkNjMyYjYyNjc3NDhkNmZhYjc4NzlkMmY4ZmFjYmJkNGMwN2RmNGZlZWIyMDkzMTQyZjM0YjFjOGMxOTIiLCJpYXQiOjE2NDM4NzAzOTAsIm5iZiI6MTY0Mzg3MDM5MCwiZXhwIjoxNjc1NDA2MzkwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.CazGEfv1HBTsJ_mtx5l2s0EvN1JcJP6vAXiffJo2woO1CwJVJPGctDITZ7fOHJyTuR0rTrBqkm1SyIQkWVtWqTwXl1DgJWMT19TCVD4p81jagg-_ZMeM0hMCGVJDh2Y6NL2i0jLWIlAKM35w4HHQjp_nO-WxygzmM93CYWDp1olPCumY3OntIj8KzAxTXzf9OtbVvD0iebZEeqLYoiK0SRY3VaZ5koQTs_TeUJOzjCiOURMx0TRZveN08f9vbKQgbd-YghQoaXgFRMNeGRi3yNPsE0xkajYKIUtghVYAv9op5nenQTJzpYoanigU_z3Xm2q-H00V6SC8bPSZTm0peIGvQRwoR3Z1-GxcAs3cBloxBR1veTtyUtXcpdbTBFpKN9A7BYZsv3UUWsnE60ZV2bFRUPIPLW2bnvDLuP6JbK3Hbb_1jDuLYNxLHUvqUqSxlZaXZZqOR08kCFKWufgBOqAzcK3YYD01DjWhU9zSi2ziALa7zWslokSC11dQHnXtsv3j7gqH_4ULULJ-0nmJV-doAAQfiTQHU91VaO1j2ktJgFm-68JhzaAWpvgJZQmKLsbxqC-1eUhO-lB6lLdSXbUJMPOl3qXWdEuRhEJ36bTwkSGYe-ibRWeMOwbTjThOZmROyJWd4kcUpMGBfFy5AA6G0QBuEf6xWFAp5At7gfY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Create API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{newtoken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/products?name=Product 4&detail=this is sample product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Product 4"
+						},
+						{
+							"key": "detail",
+							"value": "this is sample product"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Show API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{newtoken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Update API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{newtoken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/products/1/?name=Product 1000&detail=this is updated product info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products",
+						"1",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Product 1000"
+						},
+						{
+							"key": "detail",
+							"value": "this is updated product info"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Delete API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{newtoken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/products/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

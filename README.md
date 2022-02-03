@@ -7,6 +7,28 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Test API
+
+'headers' => [
+
+    'Accept' => 'application/json',
+
+    'Authorization' => 'Bearer '.$accessToken,
+
+]
+
+Here is Routes URL with Verb:
+
+Now simply you can run above listed url like as bellow screen shot:
+
+1. Register API: Verb:POST, URL:http://localhost:8000/api/register
+2. Login API: Verb:POST, URL:http://localhost:8000/api/login
+3. Product List API: Verb:GET, URL:http://localhost:8000/api/products
+4. Product Create API: Verb:POST, URL:http://localhost:8000/api/products
+5. Product Show API: Verb:GET, URL:http://localhost:8000/api/products/{id}
+6. Product Update API: Verb:PUT, URL:http://localhost:8000/api/products/{id}
+7. Product Delete API: Verb:DELETE, URL:http://localhost:8000/api/products/{id}
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
@@ -26,6 +48,7 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
 If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+
 
 ## Laravel Sponsors
 
