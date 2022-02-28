@@ -23,3 +23,10 @@ Route::post('login', [RegisterController::class, 'login']);
 Route::middleware('auth:api')->group( function () {
     Route::resource('products', ProductController::class);
 });
+
+/* Route::post('login', 'Api\AuthController@login');
+Route::post('register', 'Api\AuthController@register');
+
+Route::middleware('auth:api')->get('/user', function (Request $request) {
+    return $request->user();
+}); */
